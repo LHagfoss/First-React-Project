@@ -107,3 +107,7 @@ img {
 .item:hover .preview-img img {
   opacity: 0.2;
 }
+
+.custom-cursor {
+  transition: width 0.3s, height 0.3s;
+}
