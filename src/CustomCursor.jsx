@@ -26,7 +26,7 @@ const CustomCursor = () => {
         height: '30px',
         borderRadius: '50%',
         backgroundColor: 'white',
-        mixBlendMode: 'difference', 
+        mixBlendMode: 'difference',
         pointerEvents: 'none',
         transform: "translate(-50%, -50%)",
         zIndex: 9999,

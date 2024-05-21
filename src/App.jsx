@@ -7,6 +7,7 @@ import CustomCursor from './CustomCursor';
 function App() {
   const galleryRef = useRef(null);
   const [items, setItems] = useState([]);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const generateItems = () => {
@@ -25,7 +26,7 @@ function App() {
             rowId: row.id,
             video: video,
           };
-        });ø
+        });
       });
     
       setItems(newItems);
@@ -58,7 +59,7 @@ function App() {
           {items.map((row, rowIndex) => (
             <div key={`row-${rowIndex}`} className='row'>
               {row.map((item) => (
-                <div key={item.id} className="item">
+                <div key={item.id} className="item hover-scale">
                   <div className="preview-img">
                     <img
                       src={item.video.previewImg}
@@ -74,6 +75,7 @@ function App() {
                         <ReactPlayer
                           url={`https://vimeo.com/${item.video.videoId}`}
                           controls={false} 
+                          draggable={false}
                           autoPlay={true} 
                           loop={true}
                           playing 
